@@ -11,20 +11,26 @@
   </head>
   <body>
     <div id="root" style="display: flex; flex-direction: row">
-      <% list.forEach((file)=>{%>
-      <div class="docs" onclick="dwnld('/files/<%= file %>')">
+      <div class="docs" onclick="dwnld('/files/SAP on Azure - Whitepaper_compressed.pdf')">
         <div class="container">
-          <embed
+          <img
             width="auto"
             height="207"
-            name="plugin"
-            src="/files/<%= file %>"
-            type="application/pdf"
+            src="/thumbnails/one.png"
           />
           <div class="overlay">OPEN</div>
         </div>
       </div>
-      <%})%>
+      <div class="docs" onclick="dwnld('/files/Why SAP on Azure_compressed.pdf')">
+        <div class="container">
+          <img
+            width="auto"
+            height="207"
+            src="/thumbnails/two.png"
+          />
+          <div class="overlay">OPEN</div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
