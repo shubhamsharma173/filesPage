@@ -26,6 +26,6 @@ app.get("/download/:name", function (req, res) {
   res.download(file); // Set disposition and send it.
 });
 
-app.listen(port, () => {
+app.listen(process.env.PORT ||port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
