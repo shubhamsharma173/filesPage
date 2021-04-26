@@ -1,3 +1,3 @@
 function dwnld(name) {
-    window.open(name);
-  }
+  window.open(name);
+}
