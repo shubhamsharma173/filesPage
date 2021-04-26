@@ -4,9 +4,9 @@ const fs = require("fs");
 const port = 3000;
 
 app.set("view engine", "ejs");
-app.use(express.static("files"));
+app.use(express.static("public"));
 
-const testFolder = "./files/";
+const testFolder = "./public/files/";
 let files = [];
 fs.readdirSync(testFolder).forEach((file) => {
   //   console.log(file);

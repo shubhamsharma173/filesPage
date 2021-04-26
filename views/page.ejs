@@ -6,64 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-      function dwnld(name) {
-        window.open(name);
-      }
-    </script>
-    <style>
-      .docs {
-        margin: 10px;
-        width: 20%;
-        display: inline-flex;
-        cursor: pointer;
-      }
-      * {
-        box-sizing: border-box;
-      }
-
-      .container {
-        position: relative;
-        width: 50%;
-        max-width: 300px;
-      }
-
-      .image {
-        display: block;
-        width: 100%;
-        height: auto;
-      }
-
-      .overlay {
-        position: absolute;
-        bottom: 0;
-        background: rgb(0, 0, 0);
-        background: rgba(0, 0, 0, 0.5); /* Black see-through */
-        color: #f1f1f1;
-        width: 100%;
-        transition: 0.5s ease;
-        opacity: 0;
-        color: white;
-        font-size: 20px;
-        padding: 20px;
-        text-align: center;
-      }
-
-      .container:hover .overlay {
-        opacity: 1;
-      }
-    </style>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/main.js"></script>
   </head>
   <body>
     <div id="root" style="display: flex; flex-direction: row">
       <% list.forEach((file)=>{%>
-      <div class="docs" onclick="dwnld('/<%= file %>')">
+      <div class="docs" onclick="dwnld('/files/<%= file %>')">
         <div class="container">
           <embed
             width="auto"
             height="207"
             name="plugin"
-            src="/<%= file %>"
+            src="/files/<%= file %>"
             type="application/pdf"
           />
           <div class="overlay">OPEN</div>
